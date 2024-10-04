@@ -1,0 +1,322 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Portafolio de José</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f4f4f4;
+        }
+        header {
+            text-align: center;
+            padding: 30px;
+            background-color: #333;
+            color: white;
+        }
+        header h1 {
+            font-size: 3rem;
+        }
+        .social-links {
+    display: flex;
+    justify-content: center;
+    margin-top: 10px;
+}
+
+.social-links a {
+    margin: 0 15px;
+    color: white;
+    text-decoration: none;
+    padding: 10px;
+    border-radius: 5px;
+    transition: background-color 0.3s;
+}
+
+.social-links a:hover {
+    background-color: rgba(255, 255, 255, 0.2);
+}
+
+        section {
+            padding: 50px 0;
+            text-align: center;
+        }
+        #sobre-mi {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            padding: 50px;
+            background-color: #f9f9f9;
+        }
+        #sobre-mi img {
+            border-radius: 50%;
+            width: 150px;
+            margin-right: 20px;
+        }
+        #tecnologias {
+            background-color: #fff;
+            padding: 20px;
+            overflow: hidden;
+        }
+        #tecnologias h2 {
+            margin-bottom: 30px;
+        }
+        .tecnologias-container {
+            display: flex;
+            justify-content: flex-start;
+            align-items: center;
+            width: 100%;
+            animation: mover 20s linear infinite;
+        }
+        .tecnologias-container img {
+            width: 50px;
+            margin: 0 15px;
+        }
+        @keyframes mover {
+            0% {
+                transform: translateX(0);
+            }
+            100% {
+                transform: translateX(-50%);
+            }
+        }
+        /* Estilos para los proyectos */
+        #proyectos {
+            padding: 50px;
+            background-color: #eaeaea;
+        }
+        .proyecto {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin: 20px 0;
+            flex-wrap: wrap;
+        }
+        .proyecto:nth-child(even) {
+            flex-direction: row-reverse; /* Alterna la dirección de la imagen */
+        }
+        .proyecto img {
+            width: 100%;
+                max-width: 400px;
+                height: auto;
+                border-radius: 10px;
+                box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            }
+            .proyecto .descripcion {
+                width: 45%;
+                padding: 20px;
+            }
+            .proyecto .descripcion p {
+                text-align: left;
+                line-height: 1.6;
+            }
+            .btn-descargar {
+        padding: 10px 20px;
+        background-color: #ff5733; 
+        color: white; 
+        border: none; 
+        border-radius: 5px; 
+        cursor: pointer; 
+        font-size: 1rem; 
+        transition: background-color 0.3s, transform 0.3s; 
+        text-decoration: none; 
+    }
+
+        .btn-descargar:hover {
+            background-color: #e74c3c; /* Color de fondo al pasar el ratón */
+            transform: scale(1.05); /* Efecto de aumento al pasar el ratón */
+        }
+
+        /* Ajustes para pantallas más pequeñas */
+        @media (max-width: 768px) {
+            .proyecto {
+                flex-direction: column;
+                text-align: center;
+            }
+            .proyecto img, .proyecto .descripcion {
+                width: 100%;
+            }
+        }
+        #contacto {
+            padding: 50px;
+            background-color: #333;
+            color: white;
+        }
+        #contacto form input, #contacto form textarea {
+            width: 100%;
+            padding: 10px;
+            margin: 10px 0;
+            border-radius: 5px;
+        }
+        #contacto form button {
+            padding: 10px 20px;
+            background-color: #ff5733;
+            border: none;
+            color: white;
+            cursor: pointer;
+        }
+    </style>
+</head>
+<body>
+
+    <header>
+        <h1>Hola, soy José y soy ingeniero de sistemas</h1>
+        <p>Apasionado por las bases de datos y el análisis de datos</p>
+        <button class="btn-descargar" onclick="window.open('assets/CV2024JOSENAVARRO.pdf')">Descargar CV</button>
+        <div class="social-links">
+            <a href="https://www.linkedin.com/in/jose-david-navarro-perez-670a68262/" target="_blank">
+                <img src="img/mdi--linkedin.png" alt="LinkedIn" style="width: 20px; margin-right: 5px;"> LinkedIn
+            </a>
+            <a href="https://github.com/ClonJua" target="_blank">
+                <img src="img/mdi--github.png" alt="GitHub" style="width: 20px; margin-right: 5px;"> GitHub
+            </a>
+        </div>
+    </header>
+    
+
+<section id="sobre-mi">
+    <img src="img/yo.jpg" alt="Foto de José">
+    <div>
+        <h2>Sobre mí</h2>
+        <p>Futuro ingeniero de sistemas comprometido con su aprendizaje y la implementación de buenas prácticas en el desarrollo de software. Me motiva seguir aprendiendo, especialmente en el área de bases de datos y análisis de datos.</p>
+    </div>
+</section>
+
+<section id="tecnologias">
+    <h2>Tecnologías manejadas</h2>
+    <div class="tecnologias-wrapper">
+        <div class="tecnologias-container">
+            <img src="img/simple-icons--virtualbox.png" alt="VirtualBox">
+            <img src="img/fontisto--linux.png" alt="Linux">
+            <img src="img/simple-icons--mysql.png" alt="MySQL">
+            <img src="img/bxl--java.png" alt="Java">
+            <img src="img/bxl--spring-boot.png" alt="Spring Boot">
+            <img src="img/akar-icons--html-fill.png" alt="HTML">
+            <img src="img/akar-icons--css-fill.png" alt="CSS">
+            <img src="img/mdi--github.png" alt="GitHub">
+            <img src="img/arcticons--apex-icon-pack.png" alt="Apex">
+            <img src="img/devicon-plain--neo4j-wordmark.png" alt="Neo4j">
+            <img src="img/ant-design--java-script-outlined.png" alt="JavaScript">
+            <img src="img/ph--file-sql.png" alt="SQL">
+            <img src="img/mdi--git.png" alt="Git">
+            <img src="img/simple-icons--jira.png" alt="Jira">
+            <img src="img/teenyicons--python-outline.png" alt="Python">
+            <img src="img/fontisto--oracle.png" alt="Oracle">
+            <img src="img/arcticons--microsoft-power-bi.png" alt="Power BI">
+            <img src="img/jsf.png" alt="JSF">
+            <img src="img/jsp.png" alt="JSP">
+        </div>
+    </div>
+</section>
+
+<section id="proyectos">
+    <h2>Proyectos</h2>
+
+    <!-- Proyecto 1 -->
+    <div class="proyecto">
+        <img src="imgPorta/pro1,2.jpeg" alt="Proyecto 1">
+        <div class="descripcion">
+            <h3>Aplicación Web para Pescadores</h3>
+            <p>Desarrollé una aplicación web utilizando <strong>Java con Spring Boot</strong>, <strong>HTML</strong>, <strong>CSS</strong> y <strong>MySQL</strong> como base de datos. Este proyecto tiene como objetivo recrear un sitio para pescadores donde pueden explorar lugares de pesca, acceder a rankings, y conocer diferentes tipos de peces.</p>
+        </div>
+    </div>
+
+    <!-- Proyecto 2 -->
+    <div class="proyecto">
+        <img src="imgPorta/power1.png" alt="Proyecto 2">
+        <div class="descripcion">
+            <h3>Análisis de Datos con Power BI</h3>
+            <p>En este proyecto, presento tres proyectos personales realizados con <strong>Power BI</strong>, donde se emplea un conjunto de datos en <strong>Excel</strong>. Utilicé herramientas de <strong>ETL</strong> (Extraer, Transformar y Cargar) para preparar y analizar los datos, permitiendo una visualización efectiva de la información.</p>
+        </div>
+        <img src="imgPorta/power2.png" alt="Proyecto 2">
+        <img src="imgPorta/power3.png" alt="Proyecto 2">
+
+    </div>
+
+    <!-- Proyecto 3 -->
+    <div class="proyecto">
+        <div class="descripcion">
+            <h3>Desarrollo de Aplicaciones con APEX</h3>
+            <p>Utilicé <strong>APEX</strong>, una herramienta de Oracle para la creación de páginas web y bases de datos. A diferencia de otros proyectos, aquí me enfoqué en <strong>PL/SQL</strong>, el lenguaje propio de Oracle, aplicando diversos objetos. Puedes acceder a la aplicación mediante el siguiente enlace: <a href="https://apex.oracle.com/pls/apex/r/ueb_2/pesca-deportiva181344/login?session=2424809115819" target="_blank">Acceder a APEX</a> (Credenciales: Usuario: <strong>PANDA</strong>, Contraseña: <strong>Panda8989</strong>).</p>
+        </div>
+        <img src="imgPorta/apex2.png" alt="Proyecto 3">
+        
+        <img src="imgPorta/apex1.png" alt="Proyecto 3">
+        <img src="imgPorta/apex3.png" alt="Proyecto 3">
+
+
+    </div>
+
+    <!-- Proyecto 4 -->
+    <div class="proyecto">
+        <img src="imgPorta/calc.png" alt="Proyecto 4">
+        <div class="descripcion">
+            <h3>Calculadora de Segmentación de Redes</h3>
+            <p>Desarrollé una aplicación sencilla en <strong>JavaScript</strong>, <strong>HTML</strong> y <strong>CSS</strong> para calcular la segmentación de redes IP. Esta herramienta es especialmente útil para crear clústeres en empresas o entornos físicos. Puedes probarla aquí: <a href="https://calculadora-segmentadora-de-red-jose.vercel.app" target="_blank">Calculadora de Segmentación de Redes</a>.</p>
+        </div>
+    </div>
+
+    <!-- Proyecto 5 -->
+    <div class="proyecto">
+        <img src="imgPorta/enc.png" alt="Proyecto 5">
+        <div class="descripcion">
+            <h3>Aplicación de Encriptación y Desencriptación</h3>
+            <p>Creé una aplicación que permite encriptar y desencriptar palabras utilizando reglas predeterminadas, también desarrollada con <strong>JavaScript</strong>. Accede a la aplicación aquí: <a href="https://encriptar-y-desencriptar-textos.vercel.app" target="_blank">Encriptar y Desencriptar Textos</a>. Este proyecto básico me sirvió como base para un proyecto más avanzado en el que estoy trabajando actualmente, enfocado en la creación de una bolsa de valores.</p>
+        </div>
+    </div>
+
+    <!-- Proyecto 6 -->
+    <div class="proyecto">
+        <img src="imgPorta/oci.png" alt="Proyecto 6">
+        <div class="descripcion">
+            <h3>Uso de Nube en Oracle Cloud Infrastructure (OCI)</h3>
+            <p>He trabajado con <strong>Oracle Cloud Infrastructure</strong>, gestionando bases de datos autónomas. A pesar de que he tenido que eliminar algunas aplicaciones debido a limitaciones de espacio y costos, aquí te comparto un enlace sobre la presentación que realicé en clase relacionada con el uso de <a href="https://docs.google.com/presentation/d/1Lr6Yis-b16TdAVRwxy43bONVcl2fgIwQLmHsYdi1Hsg/edit?usp=sharing" target="_blank">OCI.</a></a></p>
+        </div>
+    </div>
+
+    <!-- Proyecto 7 -->
+    <div class="proyecto">
+        <img src="imgPorta/jira.png" alt="Proyecto 7">
+        <div class="descripcion">
+            <h3>Gestión de Proyectos en JIRA</h3>
+            <p>Actualmente, estoy colaborando en un proyecto de gestión de tareas con un profesor en la universidad, involucrando a tres cursos de ingeniería. Al finalizar, planeo adjuntar este trabajo, que está diseñado para optimizar la gestión del tiempo y la organización de diferentes proyectos en cualquier área de trabajo, utilizando la herramienta <strong>JIRA</strong>.</p>
+        </div>
+    </div>
+
+</section>
+
+<!--
+<script type="text/javascript" src="https://cdn.jsdelivr.net/npm/@emailjs/browser@3.2.0/dist/email.min.js"></script>
+<script type="text/javascript">
+    
+   (function(){
+      emailjs.init("zrArEw4ZQDejcfZRL"); // Reemplaza con tu clave pública de EmailJS
+   })();
+   
+   function enviarCorreo(event) {
+      event.preventDefault(); // Evita que el formulario se envíe de manera tradicional
+      
+      emailjs.sendForm('service_6ulxnr8', 'template_flpuylg', event.target)
+      .then(function(response) {
+         alert("¡Mensaje enviado correctamente!");
+      }, function(error) {
+         alert("Error al enviar el mensaje, intenta nuevamente.");
+      });
+   }
+</script>
+
+<section id="contacto">
+    <h2>Contáctame</h2>
+    <form onsubmit="enviarCorreo(event)">
+        <input type="text" name="nombre" placeholder="Tu nombre" required>
+        <input type="email" name="email" placeholder="Tu email" required>
+        <textarea name="mensaje" placeholder="Tu mensaje" rows="5" required></textarea>
+        <button type="submit">Enviar</button>
+    </form>
+</section>
+
+</body>
+</html>
+-->
